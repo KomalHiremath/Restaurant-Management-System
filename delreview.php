@@ -29,6 +29,13 @@
 
 </style>
 <div class="content">
+	<?php
+		$a = $_GET['a'];
+		mysqli_query($con,"delete from review where id='$a'");
+
+	?>
+		<div style="color: red; font-size: 1.4em; font-weight: bold; border-radius:10px; background-color: yellow; padding: 10px; text-align: center;">Data Deleted SuccessFully</div>
+		<br><br>
 	<table border=1 width="100%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
 
 		<tr>
@@ -52,7 +59,6 @@
 
 
 	</table>	
-
 
 </div>
 <?php include "footer.php"; ?>
